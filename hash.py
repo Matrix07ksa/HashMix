@@ -21,7 +21,7 @@ try:
         for c in M + '\n':
             n.stdout.write(c)
             n.stdout.flush()
-            mm.sleep(2. / 100)
+            mm.sleep(1. / 100)
     slow(R+'\t\t\t\t\n\n\n insta:d7_nn\t\t\t\tfb:matrix.gov')        
     print(B+'''
                              ___                                      
@@ -45,19 +45,26 @@ try:
     while True:
             if numper==1: 
                 slow(G+'''
-            [1]}> MD4
-            [2]}> MD5
-            [3]}> SHA1
-            [99]}> exit''') 
+[1]}> MD4\t\t
+[2]}> MD5\t\t
+[3]}> SHA1\t
+[4]}> SHA224\t\t
+[5]}> SHA256\t \t
+[6]}> SHA384\t\t
+[7]}> SHA512\t\t
+
+[99]}> exit\t\t''') 
+                
             else:
                 break
             numper2 =  input('Enter numper type hach:: ')
             if numper2 ==1:
                 nampas = str(input('Enter text:: '))
-                nampas = nampas.encode('utf-8')
+                nampas2 = nampas.encode('utf-8')
                 h = hashlib.new('md4')
                 h.update(nampas)
                 haa=h.hexdigest()
+                m = open('hash.txt','a').write('\n'+haa+'{{md4}}')
                 print(haa,len(haa))    
             elif numper2 ==2:
                 nampas = str(input('Enter text:: '))
@@ -65,6 +72,7 @@ try:
                 h = hashlib.new('md5')
                 h.update(nampas)
                 haa=h.hexdigest()
+                m = open('hash.txt','a').write('\n'+haa+'{{md5}}')
                 print(haa,len(haa))   
             elif numper2 ==3:
                  nampas = str(input('Enter text:: '))
@@ -72,13 +80,50 @@ try:
                  h = hashlib.new('sha1')
                  h.update(nampas)
                  haa=h.hexdigest()
+                 m = open('hash.txt','a').write('\n'+haa+'{{SHA1}}')
                  print(haa,len(haa))
+            elif numper2 ==4:
+                 nampas = str(input('Enter text:: '))
+                 nampas = nampas.encode('utf-8')
+                 h = hashlib.new('sha224')
+                 h.update(nampas) 
+                 haa=h.hexdigest()
+                 m = open('hash.txt','a').write('\n'+haa+'{{SHA224}}')
+                 print(haa,len(haa))
+            elif numper2 ==5:
+                 nampas = str(input('Enter text:: '))
+                 nampas = nampas.encode('utf-8')
+                 h = hashlib.new('sha256')
+                 h.update(nampas)
+                 haa=h.hexdigest()
+                 m = open('hash.txt','a').write('\n'+haa+'{{sha256}}')
+                 print(haa,len(haa))
+            elif numper2 ==6:
+                 nampas = str(input('Enter text:: '))
+                 nampas = nampas.encode('utf-8')
+                 h = hashlib.new('sha384')
+                 h.update(nampas)
+                 haa=h.hexdigest()
+                 m = open('hash.txt','a').write('\n'+haa+'{{sha384}}')
+                 print(haa,len(haa))
+            elif numper2 ==7:
+                 nampas = str(input('Enter text:: '))
+                 nampas = nampas.encode('utf-8')
+                 h = hashlib.new('sha512')
+                 h.update(nampas)
+                 haa=h.hexdigest()
+                 m = open('hash.txt','a').write('\n'+haa+'{{sha512}}')
+                 print(haa,len(haa))    
             elif numper2 ==99:
                 break
             else:
-                print('numper false not hach',numper)            
-except KeyboardInterrupt :    
+                print('numper false not hach',numper)
+
+except KeyboardInterrupt:
     print('ctrl keyboard false')
+except SyntaxError:
+    print('FALSE ENTER ')
+    
 
 
 
