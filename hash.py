@@ -45,13 +45,13 @@ try:
     while True:
             if numper==1: 
                 slow(G+'''
-[1]}> MD4\t\t
-[2]}> MD5\t\t
-[3]}> SHA1\t
-[4]}> SHA224\t\t
-[5]}> SHA256\t \t
-[6]}> SHA384\t\t
-[7]}> SHA512\t\t
+[1]}> MD4
+[2]}> MD5
+[3]}> SHA1
+[4]}> SHA224
+[5]}> SHA256
+[6]}> SHA384
+[7]}> SHA512
 
 [99]}> exit\t\t''') 
                 
