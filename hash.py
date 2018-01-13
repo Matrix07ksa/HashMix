@@ -59,7 +59,7 @@ try:
                 break
             numper2 =  input('Enter numper type hach:: ')
             if numper2 ==1:
-                nampas = str(input('Enter text:: '))
+                nampas = raw_input('Enter text:: ')
                 nampas2 = nampas.encode('utf-8')
                 h = hashlib.new('md4')
                 h.update(nampas)
@@ -67,7 +67,7 @@ try:
                 m = open('hash.txt','a').write('\n'+haa+'{{md4}}')
                 print(haa,len(haa))    
             elif numper2 ==2:
-                nampas = str(input('Enter text:: '))
+                nampas = raw_input('Enter text:: ')
                 nampas = nampas.encode('utf-8')
                 h = hashlib.new('md5')
                 h.update(nampas)
@@ -75,7 +75,7 @@ try:
                 m = open('hash.txt','a').write('\n'+haa+'{{md5}}')
                 print(haa,len(haa))   
             elif numper2 ==3:
-                 nampas = str(input('Enter text:: '))
+                 nampas = raw_input('Enter text:: ')
                  nampas = nampas.encode('utf-8')
                  h = hashlib.new('sha1')
                  h.update(nampas)
@@ -83,7 +83,7 @@ try:
                  m = open('hash.txt','a').write('\n'+haa+'{{SHA1}}')
                  print(haa,len(haa))
             elif numper2 ==4:
-                 nampas = str(input('Enter text:: '))
+                 nampas = raw_input('Enter text:: ')
                  nampas = nampas.encode('utf-8')
                  h = hashlib.new('sha224')
                  h.update(nampas) 
@@ -91,7 +91,7 @@ try:
                  m = open('hash.txt','a').write('\n'+haa+'{{SHA224}}')
                  print(haa,len(haa))
             elif numper2 ==5:
-                 nampas = str(input('Enter text:: '))
+                 nampas = raw_input('Enter text:: ')
                  nampas = nampas.encode('utf-8')
                  h = hashlib.new('sha256')
                  h.update(nampas)
@@ -99,7 +99,7 @@ try:
                  m = open('hash.txt','a').write('\n'+haa+'{{sha256}}')
                  print(haa,len(haa))
             elif numper2 ==6:
-                 nampas = str(input('Enter text:: '))
+                 nampas = raw_input('Enter text:: ')
                  nampas = nampas.encode('utf-8')
                  h = hashlib.new('sha384')
                  h.update(nampas)
@@ -107,7 +107,7 @@ try:
                  m = open('hash.txt','a').write('\n'+haa+'{{sha384}}')
                  print(haa,len(haa))
             elif numper2 ==7:
-                 nampas = str(input('Enter text:: '))
+                 nampas = raw_input('Enter text:: ')
                  nampas = nampas.encode('utf-8')
                  h = hashlib.new('sha512')
                  h.update(nampas)
@@ -123,6 +123,8 @@ except KeyboardInterrupt:
     print('ctrl keyboard false')
 except SyntaxError:
     print('FALSE ENTER ')
+except NameError :
+    print('((NO string FAlSE))')
     
 
 
