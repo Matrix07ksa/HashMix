@@ -1,1 +1,1 @@
-# HASHMIX
+# HashMiX
