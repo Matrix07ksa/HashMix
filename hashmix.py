@@ -35,8 +35,7 @@ try:
                 n.stdout.write(c)
                 n.stdout.flush()
                 mm.sleep(1. / 100)
-        slow(R+'\t\t\t\t\n\n\n\n\n Insta:d7_nn\t\t\t\t\t\tFB
-             :matrix.gov')        
+        slow(R+'\t\t\t\t\n\n\n\n\n Insta:d7_nn\t\t\t\t\t\tFB:matrix.gov')        
         print(R+'''
                                                                       .uuu
     z@#"%c                      .uuzm**"""""*%mu..             z*"` .e@#N      
