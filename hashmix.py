@@ -180,7 +180,7 @@ try:
                         f = f.strip()
                         if hashlib.md5(f.encode()).hexdigest()==nampas:
                            print('CRACKED HASH::',f)
-                           sleep(10)
+                           sleep(0)
                         else:
                             print('no crack found ',f)
                 if num_c ==2:
@@ -191,7 +191,7 @@ try:
                         f = f.strip()
                         if hashlib.sha1(f.encode()).hexdigest()==nampas:
                            print('CRACKED HASH::',f)
-                           sleep(10)
+                           sleep(0)
                         else:
                             print('NO Crack found ',f)
                 if num_c ==3:
@@ -215,7 +215,7 @@ try:
                         f = f.strip()
                         if hashlib.sha256(f.encode()).hexdigest()==nampas:
                             print('CRACKED HASH::',f)
-                            sleep(10)
+                            sleep(0)
                         else:
                             print('NO Crack found ',f)
                 
@@ -227,7 +227,7 @@ try:
                         f = f.strip()
                         if hashlib.sha384(f.encode()).hexdigest()==nampas:
                             print('CRACKED HASH::',f)
-                            sleep(10)
+                            sleep(0)
                         else:
                             print('NO Crack found ',f)
                 if num_c ==6:
@@ -238,7 +238,7 @@ try:
                         f = f.strip()
                         if hashlib.sha512(f.encode()).hexdigest()==nampas:
                            print('CRACKED HASH::',f)
-                           sleep(10)
+                           sleep(0)
                         else:
                             print('NO Crack found ',f)
                 elif num_c == 00:
